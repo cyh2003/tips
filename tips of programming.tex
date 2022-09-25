@@ -1,0 +1,160 @@
+\documentclass[onecolumn]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{color,xcolor}
+\usepackage{algorithmicx}
+\usepackage{listings}
+\usepackage[a4paper,left=10mm,right=10mm,top=15mm,bottom=15mm]{geometry}
+\setlength{\parindent}{2em}
+\title{编程技巧}
+\author{陈元昊}
+\date{\today}
+\begin{document}
+\maketitle
+\renewcommand{\contentsname}{目录}
+\tableofcontents
+\section{Linux}
+    \subsection{指令技巧}
+        \subsubsection{grep}
+            \noindent
+            \begin{enumerate}
+                \item 加-E选项后，可以在使用正则匹配时不用给括号转义
+            \end{enumerate}
+        \subsubsection{gcc/g++}
+            \noindent
+            \begin{enumerate}
+                \item 加-E选项后仅执行到预处理，文件后缀.i
+                \item 加-S选项后仅执行到编译，文件后缀.s
+                \item 加-C选项后仅执行到汇编，文件后缀.o
+            \end{enumerate}
+    \subsection{基本概念}
+        \subsubsection{挂起与后台运行}
+            \noindent
+            \begin{enumerate}
+                \item 挂起，一般通过按ctrl+z实现，效果为暂停执行（前台或后台程序均可以），但可用fg或bg恢复执行
+                \item 后台运行，一般通过在命令行末尾加“\&”符号实现，也可以通过挂起+后台恢复间接实现，效果为以不占用终端的方式运行
+            \end{enumerate}
+    \subsection{WSL2}
+        \subsubsection{网络}
+            \noindent
+            \begin{enumerate}
+                \item 宿主机可以用127.0.0.1访问WSL2，反之则不行
+                \item 当代理软件（Clash）位于Windows上时，Windows配置代理仅需要set http(s)\_proxy="127.0.0.1:7890"，而WSL2在使用export http(s)\_proxy="宿主机IP:7890"之前，要先用cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'获取宿主机IP（此外，用hostname -I | awk '{print \$1}'获取WSL2自身IP）
+            \end{enumerate}
+\newpage
+\section{C/C++}
+    \subsection{算法技巧}
+        \subsubsection{预处理}
+            \noindent
+            \begin{enumerate}
+                \item 二分前先使数组有序
+                \item 注意隐藏边界（长度为0,1等）
+                \item 先排序再计算往往可以简化计算过程
+                \item 有可能样例输入有序，测试点输入无序
+                \item 注意图的输入中的重边和自环，以及有向输入转化为无向图
+            \end{enumerate}
+        \subsubsection{算法执行}
+            \noindent
+            \begin{enumerate}
+                \item 二分区间的开闭由具体问题决定（一般一边开一边闭）
+                \item 递归算法需要数组记录答案时可以不用“触底”时全部修改，然后利用一个全局的bool变量连续退出，而是可以回溯时逐步修改，从而减小代码复杂度
+                \item 注意浮点数计算的上下浮动
+                \item 尝试将$n!$（排列）转化为$2^n$（组合）
+            \end{enumerate}
+        \subsubsection{算法评估}
+            \noindent
+            \begin{enumerate}
+                \item 计算递归算法复杂度可先计算递归实例的数量
+            \end{enumerate}
+    \subsection{语言特性}
+        \subsubsection{面向过程}
+            \noindent
+            \begin{enumerate}
+                \item 注意循环嵌套中，循环变量i、j、k等不要重复使用
+                \item 循环体中的变量地址不变
+                \item 使用getchar前注意去除cin等留下的回车等干扰字符
+                \item 注意数组下标越界有可能完全无异常（越在其他变量内部）
+                \item switch分支结构注意用break
+                \item 函数调用计数可利用函数体中的局部静态变量
+            \end{enumerate}
+        \subsubsection{面向对象}
+            \noindent
+            \begin{enumerate}
+                \item 对象内部局部变量需要初始化
+                \item 注意写public（默认为private）
+                \item 友元函数函数不是成员函数，不能加作用域符号
+                \item 引用本质只是别名，其创建时不会产生任何构造过程
+                \item 注意避免自身赋值
+                \item 当一个内部类或内部对象需要访问外部对象时，尽量通过外部对象成员变量的指针来访问，否则有可能出现构造顺序或访问权限的问题
+                \item 尽量不要创建野指针，如果不可避免要创建野指针，一定要初始化为nullptr
+                \item 移动构造、赋值前注意删除当前指针的内容，避免当前指针赋新值后内存泄漏
+                \item delete前对象最好指针最好不是nullptr，delete后对象指针最好置为nullptr
+                \item 在返回值和参数均可被析构时，先析构返回值，再析构参数（符合栈的顺序）
+                \item 虚函数/常量函数不能为静态函数，因为其调用/参数中需要/含有this指针
+                \item 模板函数将成员函数作为形参时，成员函数应设为静态函数，非静态成员函数因为有this指针形参，参数数量不一致，可能导致错误（sort）
+                \item std::move()对常引用无效
+                \item 派生类新定义的非虚函数和新定义的变量会在函数形参为值/引用/指针（所有情况）时被切片
+                \item 重写函数调用时，与所有当前形式类中的函数同名且参数不同的函数会被隐藏，然后按虚函数机制调用
+                \item 在派生类没有直接写出新函数的情况下，派生类不会自动生成新的虚函数继承版本，而是在虚函数表中沿用旧版本（注意与重写隐藏的关系）
+                \item 基类指针指向派生类对象时，调用被基类声明、派生类继承的虚函数不需要dynamic\_cast，调用派生类声明的函数需要dynamic\_cast
+                \item 模板的声明与实现需要在同一文件中（模板实例化在编译期确定）
+            \end{enumerate}
+    \subsection{Qt}
+        \subsubsection{绘图}
+            \noindent
+            \begin{enumerate}
+                \item Qt画圆的坐标原点为外界矩形的左上角点
+            \end{enumerate}
+        \subsubsection{原理}
+            \noindent
+            \begin{enumerate}
+                \item Qt画圆的坐标原点为外界矩形的左上角点
+            \end{enumerate}        
+\newpage
+\section{Python}
+    \subsection{语言规范}
+        \subsubsection{程序结构}
+            \noindent
+            \begin{enumerate}
+                \item 引用原生库和手写库
+                \item 定义全局变量
+                \item 定义修饰器
+                \item 定义类（包括函数对象）
+                \item 定义函数（包括argparse）
+                \item 定义主函数
+            \end{enumerate}
+    \subsection{语言特性}
+        \subsubsection{运行特性}
+            \noindent
+            \begin{enumerate}
+                \item 在使用import时正确的路径是针对main.py而言的，而不是针对当前文件而言的
+                \item global关键字的使用是为了在局部作用域中引用并修改全局变量
+                \item 闭包函数若要修改上级作用域中的变量，需要用nonlocal关键字
+                \item Python中只有模块(module)，类(class)以及函数(def、lambda)才会引入新的作用域，其它的代码块(如if、try、for等)不会引入新的作用域，因此在代码块外部可以直接引用代码块内声明的变量
+                \item Python的变量是动态声明的，未考虑到这点可能出现bug，例如在if语句中声明了变量，若该if语句条件为假，则不仅其内部语句不执行，其内部变量也不会被定义。因此，很多时候有必要在if语句之前声明变量
+            \end{enumerate}
+    \subsection{具体应用}
+        \subsubsection{正则表达式}
+            \noindent
+            \begin{enumerate}
+                \item 在?、+、*以及\{n,m\}后加?表示进行懒惰匹配（与默认的贪婪匹配相反）
+                \item \textbackslash b、\textdollar以及\^{}匹配的是单词边界，而非字符（匹配的是“一条线”）
+            \end{enumerate}
+\newpage
+\section{Javascript}
+    \subsection{语言特性}
+        \subsubsection{函数}
+            \noindent
+            \begin{enumerate}
+                \item 闭包中的作用于整个函数的变量为引用，而在某个循环内部的变量为拷贝
+            \end{enumerate}
+        \subsubsection{对象与原型}
+            \noindent
+            \begin{enumerate}
+                \item this永远指向最近的调用者
+            \end{enumerate}        
+\end{document}
