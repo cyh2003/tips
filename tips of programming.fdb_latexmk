@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1664121408 "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" "tips of programming.pdf" "tips of programming" 1664121410
-  "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" 1664121407 9277 b70944490e2cf731616c60f0e84f6823 ""
+["pdflatex"] 1664212012 "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" "tips of programming.pdf" "tips of programming" 1664212016
+  "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" 1664212007 9724 2d822da576f58b01f3a81b2b98cfba98 ""
   "c:/Windows/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "c:/Windows/Fonts/simhei.ttf" 1571147160 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
   "c:/Windows/Fonts/simsun.ttc" 1575709707 18214472 19674afc0754c3df8182b89fe7f0156d ""
@@ -95,6 +95,7 @@
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong61.tfm" 1650810581 1172 0c54aba04f6eca94b3b31a372d096e93 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong62.tfm" 1650810581 1172 9ffac14c72fbc4879502782835fb1e0a ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong63.tfm" 1650810581 1172 5558042a53f0a34c54eaf1c8af13f377 ""
+  "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong64.tfm" 1650810581 1172 9123bc1a52f39fa754022a43a1394244 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong65.tfm" 1650810581 1172 2873dd6228ece5c9b075cfdc580febae ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong66.tfm" 1650810581 1172 f300cf9aac35a61638796e3d2ecc0e47 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong67.tfm" 1650810581 1172 bfeea74ab6553bd251ccbd092c04122a ""
@@ -225,9 +226,9 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1650810629 4371942 e5ca5be49e99a1b6df6cfc98639185ad ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1650810774 1458106 c80d8f3d87e07630182beb43aaafe005 ""
   "c:/texlive/2022/texmf.cnf" 1650810600 713 e69b156964470283e0530f5060668171 ""
-  "tips of programming.aux" 1664121409 3177 df3404dc8517646a72281093402478e6 "pdflatex"
-  "tips of programming.tex" 1664121407 9277 b70944490e2cf731616c60f0e84f6823 ""
-  "tips of programming.toc" 1664121409 1915 f8fcddd21c7068a03cf12cfbd5ded2a8 "pdflatex"
+  "tips of programming.aux" 1664212014 3278 6dc25e6151b7ebd45af9d85b191acdc7 "pdflatex"
+  "tips of programming.tex" 1664212007 9724 2d822da576f58b01f3a81b2b98cfba98 ""
+  "tips of programming.toc" 1664212014 1975 7674cb7328c7928765513dc2a5639116 "pdflatex"
   (generated)
   "tips of programming.aux"
   "tips of programming.log"

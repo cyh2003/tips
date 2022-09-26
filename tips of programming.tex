@@ -31,6 +31,11 @@
                 \item 加-S选项后仅执行到编译，文件后缀.s
                 \item 加-C选项后仅执行到汇编，文件后缀.o
             \end{enumerate}
+        \subsubsection{git}
+            \noindent
+            \begin{enumerate}
+                \item 当因为token的原因（一般存在于报错）无法clone时，可尝试设置一个在网站上设置一个具有权限的token，复制之，然后在Windows凭据管理器上新建/修改一个普通凭据，注意密码应为token
+            \end{enumerate}    
     \subsection{基本概念}
         \subsubsection{挂起与后台运行}
             \noindent
@@ -71,7 +76,7 @@
                 \item 计算递归算法复杂度可先计算递归实例的数量
             \end{enumerate}
     \subsection{语言特性}
-        \subsubsection{面向过程}
+        \subsubsection{基本语法}
             \noindent
             \begin{enumerate}
                 \item 注意循环嵌套中，循环变量i、j、k等不要重复使用
@@ -80,6 +85,7 @@
                 \item 注意数组下标越界有可能完全无异常（越在其他变量内部）
                 \item switch分支结构注意用break
                 \item 函数调用计数可利用函数体中的局部静态变量
+                \item 可以使用位域直接操作内存中的位
             \end{enumerate}
         \subsubsection{面向对象}
             \noindent

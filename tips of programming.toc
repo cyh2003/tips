@@ -2,6 +2,7 @@
 \contentsline {subsection}{\numberline {1.1}指令技巧}{2}{}%
 \contentsline {subsubsection}{\numberline {1.1.1}grep}{2}{}%
 \contentsline {subsubsection}{\numberline {1.1.2}gcc/g++}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.3}git}{2}{}%
 \contentsline {subsection}{\numberline {1.2}基本概念}{2}{}%
 \contentsline {subsubsection}{\numberline {1.2.1}挂起与后台运行}{2}{}%
 \contentsline {subsection}{\numberline {1.3}WSL2}{2}{}%
@@ -12,8 +13,8 @@
 \contentsline {subsubsection}{\numberline {2.1.2}算法执行}{3}{}%
 \contentsline {subsubsection}{\numberline {2.1.3}算法评估}{3}{}%
 \contentsline {subsection}{\numberline {2.2}语言特性}{3}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}面向过程}{3}{}%
-\contentsline {subsubsection}{\numberline {2.2.2}面向对象}{3}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}基本语法}{3}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}面向对象}{4}{}%
 \contentsline {subsection}{\numberline {2.3}Qt}{4}{}%
 \contentsline {subsubsection}{\numberline {2.3.1}绘图}{4}{}%
 \contentsline {subsubsection}{\numberline {2.3.2}原理}{4}{}%
