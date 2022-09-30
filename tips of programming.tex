@@ -37,11 +37,18 @@
                 \item 当因为token的原因（一般存在于报错）无法clone时，可尝试设置一个在网站上设置一个具有权限的token，复制之，然后在Windows凭据管理器上新建/修改一个普通凭据，注意密码应为token
             \end{enumerate}    
     \subsection{基本概念}
-        \subsubsection{挂起与后台运行}
+        \subsubsection{进程管理}
             \noindent
             \begin{enumerate}
                 \item 挂起，一般通过按ctrl+z实现，效果为暂停执行（前台或后台程序均可以），但可用fg或bg恢复执行
                 \item 后台运行，一般通过在命令行末尾加“\&”符号实现，也可以通过挂起+后台恢复间接实现，效果为以不占用终端的方式运行
+                \item 由于后台运行不能让shell以阻塞方式等待，所以不能直接用waitpid的方式等待，而是要先使用信号通知shell某个子进程的结束，再进行waitpid
+            \end{enumerate}
+        \subsubsection{中断、信号}
+            \noindent
+            \begin{enumerate}
+                \item 信号处理程序中不能使用printf，原因是printf在更改缓冲区时会加锁，若主程序调用printf时，控制权离开并返回主程序，且返回主程序时发现有pending且非blocked的信号，进入信号处理程序时也调用printf，则信号程序中的printf由于主程序的printf的锁不得不等待，又由于主程序和信号处理程序处在同一个进程/线程中，因此主程序printf的锁总是无法解除，从而导致死锁
+                \item 每个线程有独立的信号处理
             \end{enumerate}
     \subsection{WSL2}
         \subsubsection{网络}
