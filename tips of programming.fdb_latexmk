@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1664521043 "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" "tips of programming.pdf" "tips of programming" 1664521047
-  "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" 1664521041 10604 313805f8212ca5bf6eab1742706d3c9d ""
+["pdflatex"] 1664552344 "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" "tips of programming.pdf" "tips of programming" 1664552347
+  "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" 1664552342 11059 e508cff35268702b5d7cfbabd625e81d ""
   "c:/Windows/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "c:/Windows/Fonts/simhei.ttf" 1571147160 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
   "c:/Windows/Fonts/simsun.ttc" 1575709707 18214472 19674afc0754c3df8182b89fe7f0156d ""
@@ -33,7 +33,6 @@
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1650807552 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1650807552 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1650807552 1120 8b7d695260f3cff42e636090a8002094 ""
-  "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei30.tfm" 1650810580 1172 18ad1097cc3f3c36c758d33bf2dd19bd ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4e.tfm" 1650810580 1172 2d5e87dd6ec409d864e1fe1662d00646 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4f.tfm" 1650810580 1172 d30a5fea134273110a27f48164b06e0c ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei51.tfm" 1650810580 1172 7ee56fddd7b8de24477f743547fdf508 ""
@@ -226,9 +225,9 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1650810629 4371942 e5ca5be49e99a1b6df6cfc98639185ad ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1650810774 1458106 c80d8f3d87e07630182beb43aaafe005 ""
   "c:/texlive/2022/texmf.cnf" 1650810600 713 e69b156964470283e0530f5060668171 ""
-  "tips of programming.aux" 1664521046 3382 572aef225777d3bbcb354fee0e171784 "pdflatex"
-  "tips of programming.tex" 1664521041 10604 313805f8212ca5bf6eab1742706d3c9d ""
-  "tips of programming.toc" 1664521046 2038 5d95b7c0fbc9543f38c66c88e7bd9626 "pdflatex"
+  "tips of programming.aux" 1664552346 3370 1d4d580ddc3ac43868c05a441dca1613 "pdflatex"
+  "tips of programming.tex" 1664552342 11059 e508cff35268702b5d7cfbabd625e81d ""
+  "tips of programming.toc" 1664552346 2026 c8fa3637abf7e9e7161d71f53b4da71b "pdflatex"
   (generated)
   "tips of programming.aux"
   "tips of programming.log"
