@@ -63,7 +63,7 @@
             \end{enumerate}
 \newpage
 \section{C/C++}
-    \subsection{算法技巧}
+    \subsection{算法}
         \subsubsection{预处理}
             \noindent
             \begin{enumerate}
@@ -86,8 +86,8 @@
             \begin{enumerate}
                 \item 计算递归算法复杂度可先计算递归实例的数量
             \end{enumerate}
-    \subsection{语言特性}
-        \subsubsection{基本语法}
+    \subsection{语法特性}
+        \subsubsection{面向过程}
             \noindent
             \begin{enumerate}
                 \item 注意循环嵌套中，循环变量i、j、k等不要重复使用
@@ -120,17 +120,18 @@
                 \item 基类指针指向派生类对象时，调用被基类声明、派生类继承的虚函数不需要dynamic\_cast，调用派生类声明的函数需要dynamic\_cast
                 \item 模板的声明与实现需要在同一文件中（模板实例化在编译期确定）
             \end{enumerate}
+    \subsection{底层机制}
+        \subsubsection{多进程/多线程}
+            \noindent
+            \begin{enumerate}
+                \item volatile（易变）关键字影响编译器的编译，使得即使进行了优化，每次访问此变量时都会重新从内存取值，从而避免信号处理/其他线程在不经意间修改此变量造成的数据不一致的问题
+            \end{enumerate}
     \subsection{Qt}
         \subsubsection{绘图}
             \noindent
             \begin{enumerate}
                 \item Qt画圆的坐标原点为外界矩形的左上角点
-            \end{enumerate}
-        \subsubsection{原理}
-            \noindent
-            \begin{enumerate}
-                \item Qt画圆的坐标原点为外界矩形的左上角点
-            \end{enumerate}        
+            \end{enumerate}      
 \newpage
 \section{Python}
     \subsection{语言规范}
