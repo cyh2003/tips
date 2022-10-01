@@ -29,7 +29,7 @@
             \begin{enumerate}
                 \item 加-E选项后仅执行到预处理，文件后缀.i
                 \item 加-S选项后仅执行到编译，文件后缀.s
-                \item 加-C选项后仅执行到汇编，文件后缀.o
+                \item 加-c选项后仅执行到汇编，文件后缀.o
             \end{enumerate}
         \subsubsection{git}
             \noindent
@@ -44,6 +44,7 @@
                 \item 后台运行，一般通过在命令行末尾加“\&”符号实现，也可以通过挂起+后台恢复间接实现，效果为以不占用终端的方式运行
                 \item 由于后台运行不能让shell以阻塞方式等待，所以不能直接用waitpid的方式等待，而是要先使用信号通知shell某个子进程的结束，再进行waitpid
                 \item 单纯用户态和内核态之间的切换不一定涉及上下文切换，所做的工作可能只是将寄存器保存在内核栈中以及其他关于状态（用户态/内核态）、程序计数器、栈指针的调整
+                \item 可重入=线程安全+信号中断安全
             \end{enumerate}
         \subsubsection{ECF}
             \noindent

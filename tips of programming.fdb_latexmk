@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1664552344 "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" "tips of programming.pdf" "tips of programming" 1664552347
-  "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" 1664552342 11059 e508cff35268702b5d7cfbabd625e81d ""
+["pdflatex"] 1664594199 "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" "tips of programming.pdf" "tips of programming" 1664594203
+  "c:/Users/cyh/Desktop/THU files/tips of programming/tips of programming.tex" 1664594197 11124 e71201fcb3c5d5e8dacf51aa7bafb51c ""
   "c:/Windows/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "c:/Windows/Fonts/simhei.ttf" 1571147160 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
   "c:/Windows/Fonts/simsun.ttc" 1575709707 18214472 19674afc0754c3df8182b89fe7f0156d ""
@@ -225,9 +225,9 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1650810629 4371942 e5ca5be49e99a1b6df6cfc98639185ad ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1650810774 1458106 c80d8f3d87e07630182beb43aaafe005 ""
   "c:/texlive/2022/texmf.cnf" 1650810600 713 e69b156964470283e0530f5060668171 ""
-  "tips of programming.aux" 1664552346 3370 1d4d580ddc3ac43868c05a441dca1613 "pdflatex"
-  "tips of programming.tex" 1664552342 11059 e508cff35268702b5d7cfbabd625e81d ""
-  "tips of programming.toc" 1664552346 2026 c8fa3637abf7e9e7161d71f53b4da71b "pdflatex"
+  "tips of programming.aux" 1664594202 3370 1d4d580ddc3ac43868c05a441dca1613 "pdflatex"
+  "tips of programming.tex" 1664594197 11124 e71201fcb3c5d5e8dacf51aa7bafb51c ""
+  "tips of programming.toc" 1664594202 2026 c8fa3637abf7e9e7161d71f53b4da71b "pdflatex"
   (generated)
   "tips of programming.aux"
   "tips of programming.log"
