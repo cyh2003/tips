@@ -85,6 +85,7 @@
                 \item 递归算法需要数组记录答案时可以不用“触底”时全部修改，然后利用一个全局的bool变量连续退出，而是可以回溯时逐步修改，从而减小代码复杂度
                 \item 注意浮点数计算的上下浮动
                 \item 尝试将$n!$（排列）转化为$2^n$（组合）
+                \item 注意在寻找最高位非0数（常见于高精度或多项式等问题）时要考虑全为0导致循环变量等于-1这一corner case
             \end{enumerate}
         \subsubsection{算法评估}
             \noindent
@@ -95,6 +96,7 @@
         \subsubsection{面向过程}
             \noindent
             \begin{enumerate}
+                \item 尝试使用cassert头文件，用其中的assert宏进行运行时断言
                 \item 注意循环嵌套中，循环变量i、j、k等不要重复使用
                 \item 循环体中的变量地址不变
                 \item 使用getchar前注意去除cin等留下的回车等干扰字符
@@ -116,6 +118,7 @@
                 \item 移动构造、赋值前注意删除当前指针的内容，避免当前指针赋新值后内存泄漏
                 \item delete前对象最好指针最好不是nullptr，delete后对象指针最好置为nullptr
                 \item 在返回值和参数均可被析构时，先析构返回值，再析构参数（符合栈的顺序）
+                \item 静态成员变量要在main函数前进行初始化
                 \item 虚函数/常量函数不能为静态函数，因为其调用/参数中需要/含有this指针
                 \item 模板函数将成员函数作为形参时，成员函数应设为静态函数，非静态成员函数因为有this指针形参，参数数量不一致，可能导致错误（sort）
                 \item std::move()对常引用无效
