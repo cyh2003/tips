@@ -41,6 +41,11 @@
             \begin{enumerate}
                 \item strace用于跟踪并输出程序执行时进行的系统调用
             \end{enumerate}
+        \subsubsection{重定向}
+            \noindent
+            \begin{enumerate}
+                \item 使用重定向输入输出时可能会遇到"\\r\\n"和"\\n"的问题，利用vscode右下角行尾序列，更改即可
+            \end{enumerate}
     \subsection{基本概念}
         \subsubsection{进程管理}
             \noindent
@@ -50,6 +55,7 @@
                 \item 由于后台运行不能让shell以阻塞方式等待，所以不能直接用waitpid的方式等待，而是要先使用信号通知shell某个子进程的结束，再进行waitpid
                 \item 单纯用户态和内核态之间的切换不一定涉及上下文切换，所做的工作可能只是将寄存器保存在内核栈中以及其他关于状态（用户态/内核态）、程序计数器、栈指针的调整
                 \item 可重入=线程安全+信号中断安全
+                \item 多级页表是一种链表+向量的数据结构，借此实现高速的访问和内存空间的节省
             \end{enumerate}
         \subsubsection{ECF}
             \noindent
@@ -97,6 +103,17 @@
             \begin{enumerate}
                 \item 计算递归算法复杂度可先计算递归实例的数量
             \end{enumerate}
+    \subsection{实用函数}
+        \subsubsection{输入输出}
+            \noindent
+            \begin{enumerate}
+                \item 可以使用freopen函数进行输入输出重定向（但可能不如命令行加重定向符号好用）
+            \end{enumerate}
+        \subsubsection{排序}
+            \noindent
+            \begin{enumerate}
+                \item qsort在数据量较小时采用插入排序，数据量中等时采用归并排序，在数据量较大时采用快速排序，且快速排序采用三数取中法，时间上较为稳定
+            \end{enumerate}        
     \subsection{语法特性}
         \subsubsection{面向过程}
             \noindent
