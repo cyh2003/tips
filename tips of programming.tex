@@ -41,6 +41,11 @@
             \begin{enumerate}
                 \item strace用于跟踪并输出程序执行时进行的系统调用
             \end{enumerate}
+        \subsubsection{nslookup}
+            \noindent
+            \begin{enumerate}
+                \item nslookup通过访问DNS服务器查询域名对应的IP地址
+            \end{enumerate}
         \subsubsection{重定向}
             \noindent
             \begin{enumerate}
@@ -71,6 +76,11 @@
             \begin{enumerate}
                 \item 宿主机可以用127.0.0.1访问WSL2，反之则不行
                 \item 当代理软件（Clash）位于Windows上时，Windows配置代理仅需要set http(s)\_proxy="127.0.0.1:7890"，而WSL2在使用export http(s)\_proxy="宿主机IP:7890"之前，要先用cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'获取宿主机IP（此外，用hostname -I | awk '{print \$1}'获取WSL2自身IP）
+            \end{enumerate}
+        \subsubsection{安全}
+            \noindent
+            \begin{enumerate}
+                \item 从宿主机复制而来的文件有时无法作为重定向输入输出文件被使用
             \end{enumerate}
 \newpage
 \section{C/C++}
