@@ -19,6 +19,11 @@
 \tableofcontents
 \section{Linux}
     \subsection{指令技巧}
+        \subsubsection{man}
+            \noindent
+            \begin{enumerate}
+                \item 通过执行man man命令可以查看man的用法，常见的用法有当因用户命令和C库函数重名而无法看到C库函数的用法时，设名称为x可以通过man 2 x来查看名为x的库函数的用法
+            \end{enumerate}
         \subsubsection{grep}
             \noindent
             \begin{enumerate}
@@ -41,10 +46,20 @@
             \begin{enumerate}
                 \item strace用于跟踪并输出程序执行时进行的系统调用
             \end{enumerate}
+        \subsubsection{time}
+            \noindent
+            \begin{enumerate}
+                \item 可使用time命令计算程序的用户态和内核态运行时间
+            \end{enumerate}
         \subsubsection{nslookup}
             \noindent
             \begin{enumerate}
                 \item nslookup通过访问DNS服务器查询域名对应的IP地址
+            \end{enumerate}
+        \subsubsection{telnet}
+            \noindent
+            \begin{enumerate}
+                \item telnet命令用于向某一地址+端口请求连接并可以发送请求，可用于网络测试
             \end{enumerate}
         \subsubsection{重定向}
             \noindent
@@ -185,8 +200,13 @@
                 \item 定义函数（包括argparse）
                 \item 定义主函数
             \end{enumerate}
-    \subsection{语言特性}
-        \subsubsection{运行特性}
+    \subsection{语言特点}
+        \subsubsection{易错点}
+            \noindent
+            \begin{enumerate}
+                \item 不要将python源码文件命名为包的名字，否则会因重复包含导致错误
+            \end{enumerate}
+        \subsubsection{运行特点}
             \noindent
             \begin{enumerate}
                 \item 在使用import时正确的路径是针对main.py而言的，而不是针对当前文件而言的
