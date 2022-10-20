@@ -85,6 +85,12 @@
                 \item 信号处理程序中不能使用printf，原因是printf在更改缓冲区时会加锁，若主程序调用printf时，控制权离开并返回主程序，且返回主程序时发现有pending且非blocked的信号，进入信号处理程序时也调用printf，则信号程序中的printf由于主程序的printf的锁不得不等待，又由于主程序和信号处理程序处在同一个进程/线程中，因此主程序printf的锁总是无法解除，从而导致死锁
                 \item 每个线程有自己独享的信号处理
             \end{enumerate}
+        \subsubsection{并发与并行}
+            \noindent
+            \begin{enumerate}
+                \item 在多线程中经常有加锁与解锁操作来保证二者之间操作的原子性，由于对于同一个锁，在任一时刻P操作数量多于V操作数量，不会有连续的两个P操作，由数学归纳法可知两种一定为形如“PVPVPVPV···”的序列
+                \item 由于多线程、cache机制与多核同时出现会造成cache不一致的问题，所以需要缓存一致性协议，但是要做到这一点较为复杂，这也是限制核心数量的原因之一
+            \end{enumerate}
     \subsection{WSL2}
         \subsubsection{网络}
             \noindent
