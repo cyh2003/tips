@@ -242,5 +242,25 @@
             \noindent
             \begin{enumerate}
                 \item this永远指向最近的调用者
-            \end{enumerate}        
+            \end{enumerate}
+\newpage
+\section{Machine Learning}
+    \subsection{Linear Regression}
+        \subsubsection{技巧}
+            \noindent
+            \begin{enumerate}
+                \item 特征归一化可以使不同特征的范围较为接近，从而加快收敛速度
+            \end{enumerate}
+    \subsection{logistic regression}
+        \subsubsection{作用}
+            \noindent
+            \begin{enumerate}
+                \item logistic函数即$f(x)=\frac{1}{1+e^{-x}}$，可以将自变量映射到(0,1)区间内，常用于聚类算法
+            \end{enumerate}
+        \subsubsection{损失函数}
+            \noindent
+            \begin{enumerate}
+                \item 一般使用交叉熵函数
+                \item 以$f(\vec{x})=\frac{1}{1+e^{-\vec{\theta}^T\vec{x}}}$作为模型时，交叉熵函数相比平方平均函数作为损失函数的最外层有两点优势，其一为不含logistic函数的导数项，可以保证较快的收敛速度，其二为可以保证损失函数永远处处为凸（保证Hessian矩阵一定处处半正定）
+            \end{enumerate}
 \end{document}
