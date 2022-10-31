@@ -36,10 +36,12 @@
                 \item 加-S选项后仅执行到编译，文件后缀.s
                 \item 加-c选项后仅执行到汇编，文件后缀.o
             \end{enumerate}
-        \subsubsection{git}
+        \subsubsection{git/github}
             \noindent
             \begin{enumerate}
-                \item 当因为token的原因（一般存在于报错）无法clone时，可尝试设置一个在网站上设置一个具有权限的token，复制之，然后在Windows凭据管理器上新建/修改一个普通凭据，注意密码应为token
+                \item 当因为token的原因（一般存在于报错）无法clone时，可尝试设置一个在网站上设置一个具有权限的token，复制之，（对于Windows）然后在Windows凭据管理器上新建/修改一个普通凭据，注意密码应为token
+                \item git工作流（github）一般分为6步，即fork（拷贝远程的原始代码并保存为一个自己的远程repo，可在github网站点击完成），git clone（如果是小改动的话可以直接在远程repo更改，此时不需要克隆远程repo到本地），git add（无需赘述），git commit（无需赘述），git push（把本地更改同步到自己的远程仓库），pull request（这里指的是维护者pull我自己的request，通过在自己的仓库点击pull request来发出请求，然后按提示操作）
+                \item 也可以通过直接写一个issue提醒维护者自己更改
             \end{enumerate}
         \subsubsection{strace}
             \noindent
@@ -262,5 +264,12 @@
             \begin{enumerate}
                 \item 一般使用交叉熵函数
                 \item 以$f(\vec{x})=\frac{1}{1+e^{-\vec{\theta}^T\vec{x}}}$作为模型时，交叉熵函数相比平方平均函数作为损失函数的最外层有两点优势，其一为不含logistic函数的导数项，可以保证较快的收敛速度，其二为可以保证损失函数永远处处为凸（保证Hessian矩阵一定处处半正定）
+            \end{enumerate}
+    \subsection{regularization parameter}
+        \subsubsection{作用}
+            \noindent
+            \begin{enumerate}
+                \item 作为在代价函数中模型参数大小的惩罚的参数（例如参数平方和的系数），用于权衡拟合程度
+                \item 过拟合一般会出现较大参数，调大regularization parameter从而防止过拟合，但regularization parameter过大会导致所有参数集中于0附近，引起欠拟合
             \end{enumerate}
 \end{document}
