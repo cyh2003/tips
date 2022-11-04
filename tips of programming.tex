@@ -43,6 +43,11 @@
                 \item git工作流（github）一般分为6步，即fork（拷贝远程的原始代码并保存为一个自己的远程repo，可在github网站点击完成），git clone（如果是小改动的话可以直接在远程repo更改，此时不需要克隆远程repo到本地），git add（无需赘述），git commit（无需赘述），git push（把本地更改同步到自己的远程仓库），pull request（这里指的是维护者pull我自己的request，通过在自己的仓库点击pull request来发出请求，然后按提示操作）
                 \item 也可以通过直接写一个issue提醒维护者自己更改
             \end{enumerate}
+        \subsubsection{screen}
+            \noindent
+            \begin{enumerate}
+                \item screen是一种相比于tmux较为简单的终端复用器
+            \end{enumerate}
         \subsubsection{strace}
             \noindent
             \begin{enumerate}
@@ -63,6 +68,13 @@
             \begin{enumerate}
                 \item telnet命令用于向某一地址+端口请求连接并可以发送请求，可用于网络测试
             \end{enumerate}
+        \subsubsection{网络资源下载}
+            \noindent
+            \begin{enumerate}
+                \item wget命令通过URL下载各种类型的网络资源
+                \item lux命令可以从网页中解析出可下载的视频资源，由用户挑选并下载
+            \end{enumerate}
+        
         \subsubsection{重定向}
             \noindent
             \begin{enumerate}
@@ -107,6 +119,12 @@
             \end{enumerate}
 \newpage
 \section{C/C++}
+    \subsection{语言风格}
+        \subsubsection{函数}
+            \noindent
+            \begin{enumerate}
+                \item 可以采用指针参数实现一个函数“返回”多个值的效果
+            \end{enumerate}
     \subsection{算法}
         \subsubsection{栈}
             \noindent
@@ -152,6 +170,7 @@
             \noindent
             \begin{enumerate}
                 \item 尝试使用cassert头文件，用其中的assert宏进行运行时断言
+                \item C/C++中位运算的优先级很低，低于四则运算和比较运算，需要注意括号的使用
                 \item 注意循环嵌套中，循环变量i、j、k等不要重复使用
                 \item 循环体中的变量地址不变
                 \item 使用getchar前注意去除cin等留下的回车等干扰字符
@@ -271,5 +290,11 @@
             \begin{enumerate}
                 \item 作为在代价函数中模型参数大小的惩罚的参数（例如参数平方和的系数），用于权衡拟合程度
                 \item 过拟合一般会出现较大参数，调大regularization parameter从而防止过拟合，但regularization parameter过大会导致所有参数集中于0附近，引起欠拟合
+            \end{enumerate}
+    \subsection{Neural Network}
+        \subsubsection{特点}
+            \noindent
+            \begin{enumerate}
+                \item 通过多层网络，实现对现实中复杂函数的模拟
             \end{enumerate}
 \end{document}
