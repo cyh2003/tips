@@ -244,12 +244,18 @@
                 \item Python中只有模块(module)，类(class)以及函数(def、lambda)才会引入新的作用域，其它的代码块(如if、try、for等)不会引入新的作用域，因此在代码块外部可以直接引用代码块内声明的变量
                 \item Python的变量是动态声明的，未考虑到这点可能出现bug，例如在if语句中声明了变量，若该if语句条件为假，则不仅其内部语句不执行，其内部变量也不会被定义。因此，很多时候有必要在if语句之前声明变量
             \end{enumerate}
-    \subsection{具体应用}
-        \subsubsection{正则表达式}
+    \subsection{包}
+        \subsubsection{re}
             \noindent
             \begin{enumerate}
                 \item 在?、+、*以及\{n,m\}后加?表示进行懒惰匹配（与默认的贪婪匹配相反）
                 \item \textbackslash b、\textdollar以及\^{}匹配的是单词边界，而非字符（匹配的是“一条线”）
+            \end{enumerate}
+        \subsubsection{numpy}
+            \noindent
+            \begin{enumerate}
+                \item 在numpy中，不同函数有的返回的是副本，有的返回的是视图，需要区分，可以用base属性来进行查看
+                \item indexing为视图而fancy\_indexing为副本
             \end{enumerate}
 \newpage
 \section{Javascript}
@@ -292,9 +298,17 @@
                 \item 过拟合一般会出现较大参数，调大regularization parameter从而防止过拟合，但regularization parameter过大会导致所有参数集中于0附近，引起欠拟合
             \end{enumerate}
     \subsection{Neural Network}
-        \subsubsection{特点}
+        \subsubsection{概述}
             \noindent
             \begin{enumerate}
                 \item 通过多层网络，实现对现实中复杂函数的模拟
+                \item 一个batch对应一次梯度下降，一个epoch对应遍历完一次训练集
+            \end{enumerate}
+        \subsubsection{BP Algorithm}
+            \noindent
+            \begin{enumerate}
+                \item 其推导推导/计算过程为，先计算除输入层外损失函数对每一层神经元接受的输入值的偏导数，可以写成一个列向量（这也是真正使用“反向传播”计算的量），然后显然有损失函数对任意一个权重的偏导数等于权重边指向的神经元的输入值的偏导数乘上权重边起始的神经元的输出值
+                \item 考虑正则化参数时要加上正则化参数项的偏导数
+                \item 对于batch size不为1时，要计算的损失函数值为平均值，公式有相应修改
             \end{enumerate}
 \end{document}
