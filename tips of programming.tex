@@ -257,6 +257,13 @@
                 \item 在numpy中，不同函数有的返回的是副本，有的返回的是视图，需要区分，可以用base属性来进行查看
                 \item indexing为视图而fancy\_indexing为副本
             \end{enumerate}
+        \subsubsection{torch}
+            \noindent
+            \begin{enumerate}
+                \item torch中大写首字母（Class）与小写首字母（Function）在用法上有区别，功能基本相同
+                \item indexing为视图而fancy\_indexing为副本
+                \item 所有下划线操作会替换原变量
+            \end{enumerate}
 \newpage
 \section{Javascript}
     \subsection{语言特性}
@@ -310,5 +317,7 @@
                 \item 其推导推导/计算过程为，先计算除输入层外损失函数对每一层神经元接受的输入值的偏导数，可以写成一个列向量（这也是真正使用“反向传播”计算的量），然后显然有损失函数对任意一个权重的偏导数等于权重边指向的神经元的输入值的偏导数乘上权重边起始的神经元的输出值
                 \item 考虑正则化参数时要加上正则化参数项的偏导数
                 \item 对于batch size不为1时，要计算的损失函数值为平均值，公式有相应修改
+                \item 根据BP的公式，初始的权重要随机初始化，否则会造成同一层的神经元出现完全相同的变化
+                \item 需要进行梯度检查验证BP的正确性
             \end{enumerate}
 \end{document}
