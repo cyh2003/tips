@@ -264,6 +264,7 @@
                 \item indexing为视图而fancy\_indexing为副本
                 \item 所有下划线操作直接操作原变量
                 \item 可以对非叶节点依次使用detach\_和requires\_grad\_方法，使该非叶节点变为求导的对象
+                \item torch无法实现对矢量结果的自动求导，需要人为输入一个外部梯度来进行计算
             \end{enumerate}
 \newpage
 \section{Javascript}
@@ -322,12 +323,13 @@
                 \item 作为在代价函数中模型参数大小的惩罚的参数（例如参数平方和的系数），用于权衡拟合程度
                 \item 过拟合一般会出现较大参数，调大regularization parameter从而防止过拟合，但regularization parameter过大会导致所有参数集中于0附近，引起欠拟合
             \end{enumerate}
-    \subsection{Neural Network}
-        \subsubsection{概述}
+    \subsection{Neural Network General}
+        \subsubsection{Basic}
             \noindent
             \begin{enumerate}
                 \item 通过多层网络，实现对现实中复杂函数的模拟
                 \item 一个batch对应一次梯度下降，一个epoch对应遍历完一次训练集
+                \item train set用于训练模型，validation set用于筛选最优模型，test set用于评估泛化误差
             \end{enumerate}
         \subsubsection{BP Algorithm}
             \noindent
