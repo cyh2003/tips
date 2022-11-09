@@ -262,7 +262,8 @@
             \begin{enumerate}
                 \item torch中大写首字母（Class）与小写首字母（Function）在用法上有区别，功能基本相同
                 \item indexing为视图而fancy\_indexing为副本
-                \item 所有下划线操作会替换原变量
+                \item 所有下划线操作直接操作原变量
+                \item 可以对非叶节点依次使用detach\_和requires\_grad\_方法，使该非叶节点变为求导的对象
             \end{enumerate}
 \newpage
 \section{Javascript}
@@ -279,6 +280,23 @@
             \end{enumerate}
 \newpage
 \section{Machine Learning}
+    \subsection{Mathematics}
+        \subsubsection{Calculus}
+            \noindent
+            \begin{enumerate}
+                \item 微分矢量公式涉及梯度、散度、旋度的关系，可以通过计算进行推导
+                \item 雅克比矩阵的每一行为向量值一个分量的梯度
+            \end{enumerate}
+        \subsubsection{Linear Algebra}
+            \noindent
+            \begin{enumerate}
+                \item none
+            \end{enumerate}
+        \subsubsection{Probability \& Statistics}
+            \noindent
+            \begin{enumerate}
+                \item none
+            \end{enumerate}
     \subsection{Linear Regression}
         \subsubsection{技巧}
             \noindent
