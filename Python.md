@@ -62,7 +62,8 @@
 2.  `indexing`为视图而`fancy_indexing`为副本
 3.  所有下划线操作直接操作原变量
 4.  可以对非叶节点依次使用`detach_`和`requires_grad_`方法，使该非叶节点变为求导的对象
-5.  `torch`无法实现对矢量结果的自动求导，需要人为输入一个外部梯度来进行计算
-6.  `torch.nn`不支持单样本输入，例如`CNN`中卷积函数接受的张量为`4`维（`batch_size`\*`channels`\*`height`\*`weight`）
-7.  在不进行训练时，使用神经网络不开启梯度，即使用`with torch.no_grad():`包裹代码
+5.  `torch`无法实现对矢量结果的自动求导，需要人为输入一个外部梯度来启动计算
+6.  在调用`backward`函数计算梯度之前，要先清空梯度为`0`
+7.  `torch.nn`不支持单样本输入，例如`CNN`中卷积函数接受的张量为`4`维（`batch_size`\*`channels`\*`height`\*`weight`）
+8.  在不进行训练时，使用神经网络不开启梯度，即使用`with torch.no_grad():`包裹代码
 8.  `torch`在使用多`GPU`并行训练时可以自动划分任务并分配给每个`GPU`
