@@ -3,8 +3,7 @@ Mathematics
 
 ### Calculus
 
-1.  微分矢量公式涉及梯度、散度、旋度的关系，可以通过计算进行推导
-
+1.  微分矢量公式涉及梯度、散度、旋度的关系，推导较为简单
 2.  雅克比矩阵的每一行为向量值一个分量的梯度
 
 ### Linear Algebra
@@ -32,8 +31,7 @@ logistic regression
 ### 损失函数
 
 1.  一般使用交叉熵函数
-
-2.  以$f(\vec{x})=\frac{1}{1+e^{-\vec{\theta}^T\vec{x}}}$作为模型时，交叉熵函数相比平方平均函数作为损失函数的最外层有两点优势，其一为不含`logistic`函数的导数项，可以保证较快的收敛速度，其二为可以保证损失函数永远处处为凸（保证`Hessian`矩阵一定处处半正定）
+2.  以$f(\vec{x})=\frac{1}{1+e^{-\vec{\theta}^T\vec{x}}}$作为模型时，交叉熵函数相比平方平均函数作为损失函数的最外层有两点优势，其一为梯度中不含激活函数的导数项，可以保证较快的收敛速度，其二为可以保证损失函数永远处处为凸（保证二阶偏导矩阵处处半正定）
 
 regularization parameter
 ------------------------
@@ -41,9 +39,7 @@ regularization parameter
 ### 作用
 
 1.  作为在代价函数中模型参数大小的惩罚的参数（例如参数平方和的系数），用于权衡拟合程度
-
 2.  过拟合一般会出现较大参数，调大`regularization parameter`从而防止过拟合，但`regularization parameter`过大会导致所有参数集中于`0`附近，引起欠拟合
-    
 3.  只在`train`过程中使用，在`cross validation`和`test`时不使用
 
 Neural Network General
@@ -52,11 +48,8 @@ Neural Network General
 ### Basic
 
 1.  通过多层网络，实现对现实中复杂函数的模拟
-
 2.  一个`batch`对应一次梯度下降，一个`epoch`对应遍历完一次训练集
-
 3.  `train set`用于训练模型，`cross validation set`用于筛选最优模型，`test set`用于评估泛化误差
-    
 4.  `train error`和`cross validation error`接近，说明没有发生过拟合
 
 ### BP Algorithm
@@ -71,4 +64,4 @@ Neural Network General
 
 1. 在交叉验证过程中进行误差分析
 2. 偏斜类指不同结果类别之间实际出现的频率差异过大，导致不能简单的用总体预测准确率来评估模型的预测效果，所以需要利用查准率（真阳性/(真阳性+假阳性)）和召回率（真阳性/(真阳性+假阴性)）来评估
-2. 权衡查准率和召回率用调和平均值较为合理（也被称作`F`函数）
+3. 权衡查准率和召回率用调和平均值较为合理（也被称作`F`函数）
