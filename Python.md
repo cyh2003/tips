@@ -33,7 +33,7 @@
 
 1. `dir`函数可用来查看对象的属性和方法
 
-包/函数
+包
 --------
 
 ### re
@@ -49,6 +49,14 @@
 
 1. `copy`函数为浅拷贝，只拷贝对象的成员本身，而不拷贝对象成员的成员
 2. `deepcopy`函数为深拷贝，会递归的拷贝整个对象
+
+### viztracer
+
+1. `viztracer`可以对`Python`程序进行`profiling`，生成`json`格式的结果文件
+2. 使用时既可以执行命令行程序，也可以在程序内插入`viztracer`的代码
+3. 若只关心某些目录/文件下的函数，则可以使用命令行中的`--include_files`参数或在初始化`Viztracer`对象时提供`include_files`参数
+4. 若只关心某些函数，则可以使用`trace_and_save`修饰器修饰该函数，效果为每次调用该函数时生成一个`json`文件，然后使用`python -m viztracer --combine *.json`来合成一个`json`文件
+5. 查看图形化结果需要使用命令`vizviewer result.json`
 
 ### torch
 
