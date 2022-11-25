@@ -85,3 +85,9 @@ Classic Algorithms
 ### PCA
 
 1. `PCA`用于可用于数据降维（压缩），保证投影损失最小
+2. `PCA`不适合用于防止过拟合
+3. 在原始方法效果不好的情况下再尝试使用`PCA`进行优化
+
+### Anomaly Detection
+
+1. 
