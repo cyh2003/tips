@@ -90,4 +90,4 @@ Classic Algorithms
 
 ### Anomaly Detection
 
-1. 
+1. 正样本少且无需区分不同类型的异常时使用异常检测，正样本多或需要对正样本进行区分时采用监督学习
