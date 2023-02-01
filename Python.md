@@ -84,6 +84,7 @@
 ### tensorboard
 
 1. 可以用来保存各种信息（纯量、统计图、计算图、词嵌入），并进行可视化显示，使用流程为先在程序中使用`torch.utils.tensorboard.SummaryWriter`进行保存，然后命令行使用`tensorboard`命令在浏览器进行显示
+1. 使用`flush`函数确保数据均已写入硬盘（尤其是模型较大时）
 
 语法糖
 --------

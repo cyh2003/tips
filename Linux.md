@@ -5,6 +5,10 @@
 
 1.  通过执行`man`命令可以查看`man`的用法，常见的用法有当因用户命令和`C`库函数重名而无法看到`C`库函数的用法时，设名称为`x`，则可以通过`man 2 x`来查看名为`x`的库函数的用法
 
+### rm
+
+1. 如果被删除文件存在特殊字符不易被直接删除时，可以通过查看`inode`编号来删除
+
 ### grep
 
 1.  加`-E`选项后，可以在使用正则匹配时不用给括号转义
@@ -24,6 +28,11 @@
 ### screen
 
 1.  `screen`是一种相比于`tmux`较为简单的终端复用器
+
+### tmux
+
+1. `tmux`是一种强大的终端复用器
+2. `tmux`默认不支持鼠标滚动，需要
 
 ### strace
 
@@ -96,7 +105,7 @@ WSL2
 2.  当代理软件（`Clash`）位于`Windows`上时，`Windows`配置代理仅需要`set
     http(s)_proxy="127.0.0.1:7890"`，而`WSL2`在使用`export
     http(s)_proxy="宿主机IP:7890"`之前，要先用`cat /etc/resolv.conf |
-    grep nameserver | awk ' print $2 '`获取宿主机`IP`（此外，用`hostname
+    grep nameserver | awk '{ print $2 }'`获取宿主机`IP`（此外，用`hostname
     -I | awk 'print $1'`获取`WSL2`自身`IP`）
 
 ### 安全

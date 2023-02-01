@@ -78,6 +78,7 @@ Neural Network General
 1. `batch normalization`可以不使用偏置值，因为其作用会被抵消
 2. `batch normalization`使得神经网络中每层的输入的分布保持一定程度的一致，可以使每一层不太依赖于上一层，进行相对独立的学习，可以得到更好的效果
 3. `batch normalization`有轻微的正则化效果，源于其作用于`batch`，相当于给整个训练集增加了一些噪声
+4. 测试时的`batch normalization`的均值和方差可以使用训练时的均值和方差的指数加权平均
 
 Error Analysis
 ----------------------
@@ -118,3 +119,10 @@ Classic Algorithms
 ### Ceiling Analysis
 
 1. 对于一个`AI`系统，通过观察对每一步给出正确的预测结果后，系统最终预测准确率的提升程度，来决定优先优化哪一个环节，一般提升越多越应该先优化
+
+Project
+----------------------
+
+### Strategy
+
+1. 可以设立优化指标（尽可能的好）和满足指标（达到就行）来进行项目效果的优化
