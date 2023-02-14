@@ -27,6 +27,23 @@
 
 1. 通过装饰器`@staticmethod`定义静态方法，且`@staticmethod`必须写在方法上
 
+环境管理
+--------
+
+### pip
+
+1. `pip`安装可以一直开启参数`--no-cache-dir`，这样可以节省空间
+2. 可以修改`site.py`来更改`pip`的默认安装路径，使之全部安装到虚拟环境目录下
+
+### conda
+
+1. 使用`conda`时注意`conda`可能会覆盖`pip`安装的包（比如先用`pip`装`pytorch`，再用`conda`装`transformers`时，`transformers`所依赖的默认是`cpu`版本的`pytorch`，会造成覆盖）
+2. 使用`conda`删除一个包的依赖再去删除那个包，可能会造成删除再即将结束时卡死
+
+### pipdeptree
+
+1. 使用`pipdeptree`可以递归地查看一个已安装包的依赖包的名称和版本要求
+
 函数
 --------
 
